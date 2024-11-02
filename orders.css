@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/08/Food-Wallpapers-HD-For-Desktop.jpg'); /* Path to the background image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling/repeating of the image */
+    background-attachment: fixed; /* Fix the background while scrolling */
+    margin: 0;
+    padding: 0;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#menu, #cart {
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 45%;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-input {
+    width: 50px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #606162;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#total-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#clear-cart, #place-order {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+#order-confirmation {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 10;
+}
+
+#order-confirmation.hidden {
+    display: none;
+}
+
+#order-confirmation h2 {
+    margin-bottom: 20px;
+}

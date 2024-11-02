@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+header {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(255, 0, 150, 0.8)); /* Colorful gradient background */
+    color: white;
+    text-align: center;
+    padding: 40px 20px; /* Increased padding for more space */
+    position: fixed; /* Keeps the header fixed at the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    transition: background 0.4s ease; /* Smooth transition for background */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Larger font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+    animation: fadeIn 1s ease; /* Fade-in animation */
+}
+
+/* Hover effect for header */
+header:hover {
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.8), rgba(0, 123, 255, 0.8)); /* Reverse gradient on hover */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide down effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add a padding to the body to avoid overlap with the fixed header */
+body {
+    padding-top: 100px; /* Increased to account for the larger header */
+}
+
+
+nav {
+    margin-top: 70px; /* Adjust for fixed header */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+main {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.report-content p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.9);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

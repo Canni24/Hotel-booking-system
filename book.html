@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Hotel Room Booking</title>
+    <link rel="stylesheet" href="roombook.css">
+</head>
+<body>
+    <header>
+        <h1>Flavour Town Booking</h1>
+        <p>Experience luxury like never before!</p>
+    </header>
+    
+    <main>
+        
+        <section id="booking-form">
+            <h2>Book a Room</h2>
+            <form id="room-booking-form">
+                <label for="room-type">Choose Room Type:</label>
+                <select id="room-type">
+                    <option value="standard" data-price="100" data-description="A cozy room with a king-sized bed and a beautiful view." data-image="https://th.bing.com/th/id/OIP.YlF5RjQbKdSe-jPvbJuo7QHaE8?rs=1&pid=ImgDetMain">Standard Room - $100/night</option>
+                    <option value="deluxe" data-price="200" data-description="A deluxe room with a private balcony and luxury amenities." data-image="https://th.bing.com/th/id/OIP.lwLWFx0HQR4o9UqcCNe4CgHaEH?rs=1&pid=ImgDetMain">Deluxe Room - $200/night</option>
+                    <option value="suite" data-price="350" data-description="An extravagant suite with a separate living area and private pool." data-image="https://photos.mandarinoriental.com/is/image/MandarinOriental/dmo-Seven-suites-01-Beijing">Suite - $350/night</option>
+                </select>
+
+                <button type="button" id="view-details">View Details</button>
+
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in">
+
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out">
+
+                <fieldset>
+                    <legend>Extra Services</legend>
+                    <label>
+                        <input type="checkbox" id="breakfast" value="30"> Breakfast - $30/day
+                    </label>
+                    <label>
+                        <input type="checkbox" id="airport-transfer" value="50"> Airport Transfer - $50
+                    </label>
+                </fieldset>
+
+                <label for="promo-code">Promo Code:</label>
+                <input type="text" id="promo-code" placeholder="Enter promo code">
+
+                <button type="button" id="apply-promo">Apply Promo</button>
+
+                <p id="total-price">Total Price: $0.00</p>
+                <button type="button" id="check-availability">Check Availability</button>
+                <button type="button" id="book-now" disabled>Book Now</button>
+            </form>
+        </section>
+
+        <div id="room-details-modal" class="hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-room-name"></h2>
+                <p id="modal-room-description"></p>
+                <img id="modal-room-image" src="" alt="Room Image">
+            </div>
+        </div>
+
+        <div id="confirmation" class="hidden">
+            <h2>Booking Confirmation</h2>
+            <p id="confirmation-details"></p>
+            <button id="close-confirmation">Close</button>
+        </div>
+    </main>
+
+    <script src="booking.js"></script>
+</body>
+</html>
